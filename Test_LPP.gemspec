@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TestLPP::VERSION
   spec.authors       = ["alu0100405200"]
   spec.email         = ["alu0100405200@ull.edu.es"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Clase Pregunta}
+  spec.description   = %q{Gema para la Practica 5 de LPP-}
   spec.homepage      = ""
   spec.license       = "MIT"
 
