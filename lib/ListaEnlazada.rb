@@ -1,26 +1,26 @@
-class ListNode
-  attr_accessor :value, :succ
+class Nodo
+  attr_accessor :valor, :sig
 
-  def initialize(value, succ=nil)
+  def initialize(value, sig=nil)
     @value = value
-    @succ = succ
+    @sig = sig
   end
 
   def each(&b)
     yield self
-    succ.each(&b) if succ
+    sig.each(&b) if sig
   end
 
   include Enumerable
 
   def self.from_array(ary)
-    head = self.new(ary[0], nil)
-    prev = head
+    top = self.new(ary[0], nil)
+    post = head
     ary[1..-1].each do |val|
       node = self.new(val, nil)
-      prev.succ = node
-      prev = node
+      post.sig = node
+      post = node
     end
-    head
+    top
   end
 end
