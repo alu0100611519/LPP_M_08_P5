@@ -1,26 +1,41 @@
-require "Test_LPP/version"
+#require-relative "Test_LPP/version"
 
 module TestLPP
-  class Pregunta
-    def initialize (enunciado,opciones,respuesta)
-      @enun = enunciado
-      @op = opciones
-      @resp = respuesta
-    end
 
-    def to_s
-      toReturn = ""
-      toReturn << @enun << "\n"
-      @op.each do |op|
-        toReturn << op << "\n"
-      end
-      toReturn
-    end
 
-    def responder (eleccion)
-      eleccion == @resp
-    end
+	class Pregunta
+		
+		attr_reader :enunciado , :opciones , :numero_opciones , :respuesta
 
-  end 
+    		def initialize (enunciado,opciones, numero_opciones ,respuesta) #enunciado de la pregunta, vector de strings con las opciones de pregunta, respuesta correcta
+     			
+			@op = []
+			@enun = enunciado
+			@resp = respuesta
+			@op   = opciones
+      			@n_o  = numero_opciones #tamanyo de las opciones, numero que necesittaremos para usar el bucle
+    		end
+
+		def to_s
+
+			puts "#{@enun}"
+			i = 0
+			while i < @n_o
+			puts "#{i+1}-#{@op[i]}"
+			i += 1 
+			end
+    		end
+
+		def responder (eleccion)
+
+			if(eleccion == @resp)
+				return true
+			else
+				return false
+			end
+    		end
+
+  	end 
 
 end
+
