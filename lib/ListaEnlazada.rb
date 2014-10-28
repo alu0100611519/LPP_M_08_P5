@@ -2,7 +2,7 @@ class Nodo
   attr_accessor :valor, :sig
 
   def initialize(value, sig=nil)
-    @value = value
+    @valor = value
     @sig = sig
   end
 
