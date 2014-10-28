@@ -15,7 +15,7 @@ class Nodo
 
   def self.from_array(ary)
     top = self.new(ary[0], nil)
-    post = head
+    post = top
     ary[1..-1].each do |val|
       node = self.new(val, nil)
       post.sig = node
