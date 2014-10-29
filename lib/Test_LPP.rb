@@ -1,6 +1,6 @@
 #require-relative "Test_LPP/version"
 
-module TestLPP
+#module TestLPP
 
 
 	class Pregunta
@@ -18,10 +18,10 @@ module TestLPP
 
 		def to_s
 
-			puts "#{@enun}"
+			puts "#{@enun}\n"
 			i = 0
 			while i < @n_o
-			puts "#{i+1}-#{@op[i]}"
+			puts "#{i+1}- #{@op[i]}"
 			i += 1 
 			end
     		end
@@ -37,5 +37,5 @@ module TestLPP
 
   	end 
 
-end
+#end
 
