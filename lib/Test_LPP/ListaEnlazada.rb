@@ -34,7 +34,13 @@ class Lista
     		sig.each(&b) if sig
   	end
 
+	def extraer # extraer el primer elemento
+	tmp = @head
+	@head = @head.sig
+	@head.prev = nil
+	return tmp.valor
 
+	end
 	def from_array(ary)
 
 	if ary.kind_of? Fixnum
