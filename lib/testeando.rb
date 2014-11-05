@@ -22,3 +22,5 @@ list.head.to_s
 
 puts "\n--- TAIL---"
 list.tail.to_s
+
+binding.pry
