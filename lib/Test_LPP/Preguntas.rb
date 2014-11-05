@@ -1,5 +1,5 @@
 class Pregunta
-        attr_reader :enunciado , :opciones , :numero_opciones , :respuesta
+        attr_reader :enunciado , :op , :numero_opciones , :respuesta
         def initialize (enunciado,opciones, numero_opciones ,respuesta) #enunciado de la pregunta, vector de strings c$
                 @op = []
                 @enun = enunciado
@@ -9,12 +9,14 @@ class Pregunta
         end
         
         def to_s
-                puts "#{@enun}\n"
+                tmp = ""
+                tmp << "#{@enun}\n"
                 i = 0
                 while i < @n_o
-                puts "#{i+1}- #{@op[i]}"
+                tmp << "#{i+1}- #{@op[i]}"
                 i += 1
                 end
+                tmp
         end
         
         def enunciado
