@@ -38,21 +38,18 @@ end
 class TrueFalse < Pregunta
 
 	def initialize (enunciado, cierta)
-	      if cierta
-	        @op = ["Cierto","Falso"]
-	        @enun = enunciado
-	        @resp = 1
-	        @n_o = 2
-	      else
-	        @op = ["Cierto","Falso"]
-	        @enun = enunciado
-	        @resp = 2
-	        @n_o = 2
-	      end
+	  @op = ["Cierto","Falso"]
+	  @enun = enunciado
+	  if cierta
+	    @resp = 1
+	  else
+	    @resp = 2
+	  end
+	  @n_o = 2
 	end
 
         def to_s
-          "#{@enun}\n1- Cierto\n2- Falso"
+          "#{@enun}\n1- Cierto\n2- Falso\n"
         end
 
 end
