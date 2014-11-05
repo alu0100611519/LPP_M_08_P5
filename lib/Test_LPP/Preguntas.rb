@@ -7,6 +7,7 @@ class Pregunta
                 @op = opciones
                 @n_o = numero_opciones #tamanyo de las opciones, numero que necesittaremos para usar el bucle
         end
+        
         def to_s
                 puts "#{@enun}\n"
                 i = 0
@@ -15,6 +16,11 @@ class Pregunta
                 i += 1
                 end
         end
+        
+        def enunciado
+                @enun
+        end
+        
         def responder (eleccion)
                 if(eleccion == @resp)
                         return true
