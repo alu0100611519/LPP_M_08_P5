@@ -1,76 +1,47 @@
-class Node
-attr_accessor :valor , :pre , :sig
-
-	def initialize(valor , pre , sig)
-	@valor = valor
-	@sig   = sig
-	@pre   = pre
-	
-	end
-
-end
-
-
+Node = Struct.new(:valor,:sig,:prev)
 
 
 class Lista
-	attr_accessor :arreglo
 	include Enumerable
 	include Comparable
 
-	def initialize(arreglo)
-
-		@head = Node.new( nil , nil , nil)
-		from_array(arreglo)	
-   		
-  	end
+	def initialize(head=nil, tail=nil)
+		@head = head
+		@tail = tail
+	end
 	
-	def valido
-	return @head.valor
+	def pop # extraer el primer elemento
+		tmp = @head
+		@head = @head.sig
+		@head.prev = nil
+		return tmp.valor
 	end
 
-	def each(&b)
-    		yield self
-    		sig.each(&b) if sig
-  	end
-
-	def extraer # extraer el primer elemento
-	tmp = @head
-	@head = @head.sig
-	@head.prev = nil
-	return tmp.valor
-
-	end
-	def from_array(ary)
-
-	if ary.kind_of? Fixnum
-			tmp = Node.new( ary, nil , nil)
-			@head.pre = tmp
-			tmp.sig = @head
-			@head = tmp
-	elsif ary.kind_of? Array
-
-		(0..(ary.length)).each do |i|
-			tmp = Node.new(ary[i], nil , nil)
-			@head.pre = tmp
-			tmp.sig   = @head
-			@head     = tmp
+	def self.from_array(ary)
+		@head = Node.new(ary[0],nil,nil)
+		@previous = @head
+		ary[1..-1].each do |p|
+			@previous.sig = Node.new(p,nil,@previous)
+			@current = @previous.sig
+			@previous = @current
 		end
-	end   
+		Lista.new(@head,@current)
+	end
 	
-    #top = self.new(ary[0], nil)
-    #ant = top
-    #ary[1..-1].each do |val|
-     #node = self.new(val, nil)
-      #ant.sig = node
-      #ant = node
-    #end
-    #top
-  	end
+	def head #devuelve el VALOR del primer nodo
+		@head.valor
+	end
+	
+	def tail #devuelve el VALOR del ultimo nodo
+		@tail.valor
+	end
+	
+	def top #devuelve el primer NODO
+		@head
+	end
+	
+	def bot #devuelve el ultimo NODO
+		@tail
+	end
+	
 end
-
-
-
-p = Lista.new(1)
-puts "Valor p: #{p.valido}"
-
