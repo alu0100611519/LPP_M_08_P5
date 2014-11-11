@@ -3,7 +3,7 @@ Node = Struct.new(:valor,:sig,:prev)
 
 class Lista
 	include Enumerable
-	include Comparable
+	
 
 	def initialize(head=nil, tail=nil)
 		@head = head

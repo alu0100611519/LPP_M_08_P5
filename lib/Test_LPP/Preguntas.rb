@@ -1,4 +1,7 @@
 class Pregunta
+
+	include Comparable
+
         def initialize (enunciado,opciones, numero_opciones ,respuesta) #enunciado de la pregunta, vector de strings c$
                 @op = []
                 @enun = enunciado
@@ -7,6 +10,7 @@ class Pregunta
                 @n_o = numero_opciones #tamaño de las opciones, numero que necesittaremos para usar el bucle
         end
         
+	#to string
         def to_s
                 tmp = ""
                 tmp << "#{@enun}\n"
@@ -16,7 +20,8 @@ class Pregunta
                 i += 1
                 end
                 tmp
-        end
+        end #end to_s
+	
         
         def enunciado
                 @enun
@@ -25,6 +30,10 @@ class Pregunta
         def opciones
                 @op
         end
+	
+	def correcta
+		@resp
+	end
         
         def responder (eleccion)
                 if(eleccion == @resp)
