@@ -16,9 +16,13 @@ end
 	expect(@p2.class.superclass).to eq Pregunta
     end
     it "Debe existir una pregunta" do
-        expect(@p1).not_to eq nil
+        expect(@p1 == nil).to eq(false)
     end
-    
+   
+    it "Modulo comparable " do
+    	expect(@p1 == @p2).to eq(false)
+    end
+	 
     it "Se debe invocar a un metodo para obtener la pregunta" do
         expect(@p1.enunciado).not_to eq "" 
     end
