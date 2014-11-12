@@ -92,7 +92,7 @@ describe Lista do
         expect(@list.count).to eq 5
     end
 
-    it "Despues de una eliminación, deben existir 4 elementos en la lista" do
+    it "Despues de una eliminacion, deben existir 4 elementos en la lista" do
         @list.pop_tail
         expect(@list.count).to eq 4
     end
