@@ -62,7 +62,7 @@ class Lista
 	def each(&block)
 		tmp = @head
 		while tmp do 
-			block.call(tmp)
+			block.call(tmp.valor)
 			tmp = tmp.sig
 		end
   	end

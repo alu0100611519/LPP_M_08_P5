@@ -66,8 +66,8 @@ describe Lista do
         @p3 = Pregunta.new("3.-) Cual es la salida del siguiente codigo Ruby?\n\tclass Array\n\t  def say_hi\n\t    \"HEY!\"\n\t  end\n\tend\n\np [1, \"bob\"].say_hi",["1","bob","HEY!","Ninguna de las anteriores"],4,3)
         @p4 = Pregunta.new("4.-) Cual es el tipo del objeto en el siguiente codigo Ruby?\n\tclass Objeto\n\tend",["Una instancia de la clase Class","Una constante","Un objeto","Ninguna de las anteriores"],4,1)
         @p5 = TrueFalse.new("5.-) Es apropiado que una clase Tablero herede de una clase Juego",false)
-        ary = [@p1,@p2,@p3,@p4,@p5]
-        @list = Lista.from_array(ary)
+        @ary = [@p1,@p2,@p3,@p4,@p5]
+        @list = Lista.from_array(@ary)
     end
     
     it "Se extrae el primer elemento de la lista" do
@@ -90,7 +90,7 @@ describe Lista do
         expect(@list.head).not_to eq nil
     end
     
-    it "Deben existir [5] elementos en la lista" do
+    it "Deben existir 5 elementos en la lista" do
         expect(@list.count).to eq 5
     end
 
@@ -98,4 +98,17 @@ describe Lista do
         @list.pop_tail
         expect(@list.count).to eq 4
     end
+    
+    it "Comprobamos que la lista contiene los mismos elementos que el array en el mismo orden" do
+        expect(@list.all?).to eq true
+    end
+    
+    it "La pregunta mas pequenya es la 5" do
+        expect(@list.min).to eq @p5
+    end
+    
+    it "Max debe devolver la pregunta 2" do
+        expect(@list.max).to eq @p2
+    end
+    
 end
