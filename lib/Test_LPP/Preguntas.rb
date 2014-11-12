@@ -34,7 +34,20 @@ class Pregunta
 	def correcta
 		@resp
 	end
-        
+      
+	def ==(other)
+	
+		if(other == nil)
+			return false
+		else
+			if (self.enunciado() == other.enunciado()) && ( self.opciones() == other.opciones())
+				return true
+			else
+				return false
+			end 
+		end
+	end 
+ 
         def responder (eleccion)
                 if(eleccion == @resp)
                         return true
