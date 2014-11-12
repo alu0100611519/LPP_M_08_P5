@@ -59,6 +59,14 @@ class Lista
 		end
 	end
 	
+	def each(&block)
+		tmp = @head
+		while tmp do 
+			block.call(tmp)
+			tmp = tmp.sig
+		end
+  	end
+	
 	def pop_tail
 		tmp = @tail.valor
 		@tail = @tail.prev

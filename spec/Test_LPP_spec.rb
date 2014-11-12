@@ -6,8 +6,8 @@ require 'spec_helper.rb'
 describe Pregunta do
     before do
         @p1 = Pregunta.new("1.-) Cual es la salida del siguiente codigo Ruby?\n\tclass Xyx\n\t  def pots\n\t    @nice\n\t  end\n\tend\n\nxyz = Xyz.new\np xyz.pots",["#<Xyz:0xa00208>","nil","0","Ninguna de las anteriores"],4,2)
-	@p2 = TrueFalse.new("2.-) La siguiente definicion de un hash en Ruby es valida:\n\thash_raro = {\n\t  [1,2,3] => Oject.new(),\n\t  Hash.new => :toto\n}",true)    
-end
+    	@p2 = TrueFalse.new("2.-) La siguiente definicion de un hash en Ruby es valida:\n\thash_raro = {\n\t  [1,2,3] => Oject.new(),\n\t  Hash.new => :toto\n}",true)    
+    end
     
     it "Comprobar a que clase pertenece" do
 	expect(@p2.class).to eq TrueFalse
@@ -86,5 +86,14 @@ describe Lista do
     
     it "Debe existir una lista con su cabeza" do
         expect(@list.head).not_to eq nil
+    end
+    
+    it "Deben existir [5] elementos en la lista" do
+        expect(@list.count).to eq 5
+    end
+
+    it "Despues de una eliminación, deben existir 4 elementos en la lista" do
+        @list.pop_tail
+        expect(@list.count).to eq 4
     end
 end
