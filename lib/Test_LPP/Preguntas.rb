@@ -34,7 +34,11 @@ class Pregunta
 	def correcta
 		@resp
 	end
-     	
+
+	def <=>(other)
+		return nil unless other.instance_of? Pregunta
+		self.enunciado().length <=> other.enunciado.length
+	end      	
 	def ==(other)
 	
 		if(other == nil)

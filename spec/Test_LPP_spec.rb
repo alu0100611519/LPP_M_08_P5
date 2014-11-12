@@ -22,6 +22,8 @@ describe Pregunta do
     it "Modulo comparable " do
     	expect(@p1 == @p2).to eq(false)
 	expect(@p2 >= @p1).to eq(true)
+	expect(@p2 > @p1).to eq(true)
+	expect(@p2 < @p1).to eq(false)
     end
 	 
     it "Se debe invocar a un metodo para obtener la pregunta" do
