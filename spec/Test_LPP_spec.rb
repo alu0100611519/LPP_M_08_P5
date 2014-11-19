@@ -22,9 +22,9 @@ describe Pregunta do
    
     it "Modulo comparable " do
     	expect(@p1 == @p2).to eq(false)
-	expect(@p2 >= @p1).to eq(true)
-	expect(@p2 > @p1).to eq(true)
-	expect(@p2 < @p1).to eq(false)
+	    expect(@p2 >= @p1).to eq(true)
+	    expect(@p2 > @p1).to eq(true)
+	    expect(@p2 < @p1).to eq(false)
     end
 	 
     it "Se debe invocar a un metodo para obtener la pregunta" do
@@ -73,7 +73,7 @@ describe Exam do
     end
     
     it "El array [2,1,1,2,3] devuelve 5" do
-        expect(@examen.testcheck(['2','1','1','2','3'])).to eq 5
+        expect(@examen.testcheck(['3','3','3','3','3'])).to eq 1
     end
     
     it "El array [2,2,2,2,2] devuelve 2" do
@@ -97,7 +97,7 @@ describe Lista do
     end
     
     it "Se extrae el primer elemento de la lista" do
-        expect(@list.pop).to eq @p5
+        expect(@list.pop.dif).to eq 1
     end
     
     it "Se puede insertar un elemento" do
