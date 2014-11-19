@@ -2,12 +2,13 @@ class Pregunta
 
 	include Comparable
 
-        def initialize (enunciado,opciones, numero_opciones ,respuesta) #enunciado de la pregunta, vector de strings c$
+        def initialize (enunciado,opciones, numero_opciones ,respuesta, dificultad) #enunciado de la pregunta, vector de strings c$
                 @op = []
                 @enun = enunciado
                 @resp = respuesta
                 @op = opciones
                 @n_o = numero_opciones #tamaño de las opciones, numero que necesittaremos para usar el bucle
+                @dif = dificultad
         end
         
 	#to string
@@ -22,6 +23,9 @@ class Pregunta
                 tmp
         end #end to_s
 	
+	def dif
+		@dif
+	end
         
         def enunciado
                 @enun
@@ -82,11 +86,12 @@ class TrueFalse < Pregunta
 	  @op = ["Cierto","Falso"]
 	  @enun = enunciado
 	  if cierta
-	    @resp = 1
+	    @resp = '1'
 	  else
-	    @resp = 2
+	    @resp = '2'
 	  end
 	  @n_o = 2
+	  @dif = 1
 	end
 
         def to_s

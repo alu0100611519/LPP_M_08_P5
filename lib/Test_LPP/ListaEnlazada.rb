@@ -18,6 +18,7 @@ class Lista
 	end
 
 	def self.from_array(ary)
+		ary.sort! { |x,y| x.dif <=> y.dif }
 		head = Node.new(ary[0],nil,nil)
 		previous = head
 		current = Node.new(nil,nil,nil)
