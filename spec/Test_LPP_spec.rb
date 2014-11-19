@@ -73,7 +73,7 @@ describe Exam do
     end
     
     it "El array [2,1,1,2,3] devuelve 5" do
-        expect(@examen.testcheck(['2','1','1','2','3'])).to eq 5
+        expect(@examen.testcheck(['3','3','3','3','3'])).to eq 1
     end
     
     it "El array [2,2,2,2,2] devuelve 2" do
