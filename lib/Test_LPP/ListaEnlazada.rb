@@ -76,6 +76,19 @@ class Lista
   		end
   	end
 	
+	def reverse!
+		nhead = @tail
+		ntail = @head
+		@head = nhead
+		@tail = ntail
+		self.reverse_each { |member|
+			tmnext = member.prev
+			tmprev = member.sig
+			member.prev = tmprev
+			member.sig = tmnext
+		}
+	end
+	
 	def pop_tail
 		tmp = @tail.valor
 		@tail = @tail.prev
