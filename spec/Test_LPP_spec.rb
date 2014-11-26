@@ -137,4 +137,9 @@ describe Lista do
         expect(@list.max).to eq @p2
     end
     
+    it "Le da la vuelta a la lista" do
+        @list.push(@p1)
+        @list.reverse! 
+        expect(@list.head).to eq @p1
+    end
 end

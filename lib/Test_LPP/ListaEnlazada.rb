@@ -71,7 +71,7 @@ class Lista
   	def reverse_each(&block)
   		tmp = @tail
   		while tmp do
-  			block.call(tmp.valor)
+  			block.call(tmp)
   			tmp = tmp.prev
   		end
   	end
