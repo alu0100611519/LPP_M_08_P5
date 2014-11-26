@@ -67,6 +67,14 @@ class Lista
 			tmp = tmp.sig
 		end
   	end
+  	
+  	def reverse_each(&block)
+  		tmp = @tail
+  		while tmp do
+  			block.call(tmp.valor)
+  			tmp = tmp.prev
+  		end
+  	end
 	
 	def pop_tail
 		tmp = @tail.valor

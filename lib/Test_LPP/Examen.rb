@@ -56,6 +56,12 @@ class Exam
 		end
 		@right	
 	end
+	
+	def reverse &block
+		@Lis.reverse_each do |q|
+			block.call q
+		end
+	end
 
 	def run
 		puts "/n/nExamen de LPP "
