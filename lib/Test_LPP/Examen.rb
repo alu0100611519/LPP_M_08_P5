@@ -5,6 +5,7 @@
 
 class Exam
 	
+      #constructor interactivo para que el usuario responda las preguntas desde un fichero ejecutable
 	def initialize( lis )
 		raise ArgumentError, 'No es una lista' unless lis.is_a? Lista
 		puts "Introduzca su nombre:"
@@ -17,7 +18,8 @@ class Exam
 		@right = 0
 		@Lis = lis
 	end
-	
+
+	#constructor no interactivo , para poder pasar la clase por el rspec
 	def initialize (lis, nombre, apellidos)
 		raise ArgumentError, 'No es una lista' unless lis.is_a? Lista
 		@nombre = nombre
