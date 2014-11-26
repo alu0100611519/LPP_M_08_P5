@@ -161,7 +161,7 @@
 
           
           <div class="method-source-code" id="from_array-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 20</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">from_array</span>(<span class="ruby-identifier">ary</span>)
         <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">sort!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">dif</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">dif</span> }
         <span class="ruby-identifier">head</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ary</span>[<span class="ruby-value">0</span>],<span class="ruby-keyword">nil</span>,<span class="ruby-keyword">nil</span>)
@@ -203,7 +203,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 8</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">head</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">tail</span>=<span class="ruby-keyword">nil</span>)
         <span class="ruby-ivar">@head</span> = <span class="ruby-identifier">head</span>
         <span class="ruby-ivar">@tail</span> = <span class="ruby-identifier">tail</span>
@@ -245,7 +245,7 @@
 
           
           <div class="method-source-code" id="bot-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 45</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">bot</span> <span class="ruby-comment">#devuelve el ultimo NODO</span>
         <span class="ruby-ivar">@tail</span>
 <span class="ruby-keyword">end</span></pre>
@@ -278,7 +278,7 @@
 
           
           <div class="method-source-code" id="each-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 63</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
         <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@head</span>
         <span class="ruby-keyword">while</span> <span class="ruby-identifier">tmp</span> <span class="ruby-keyword">do</span> 
@@ -315,7 +315,7 @@
 
           
           <div class="method-source-code" id="head-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 33</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">head</span> <span class="ruby-comment">#devuelve el VALOR del primer nodo</span>
         <span class="ruby-ivar">@head</span>.<span class="ruby-identifier">valor</span>
 <span class="ruby-keyword">end</span></pre>
@@ -348,7 +348,7 @@
 
           
           <div class="method-source-code" id="pop-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 13</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pop</span> <span class="ruby-comment"># extraer el primer elemento</span>
         <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@head</span>.<span class="ruby-identifier">valor</span>
         <span class="ruby-ivar">@head</span> = <span class="ruby-ivar">@head</span>.<span class="ruby-identifier">sig</span>
@@ -384,7 +384,7 @@
 
           
           <div class="method-source-code" id="pop_tail-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 79</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pop_tail</span>
         <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@tail</span>.<span class="ruby-identifier">valor</span>
         <span class="ruby-ivar">@tail</span> = <span class="ruby-ivar">@tail</span>.<span class="ruby-identifier">prev</span>
@@ -420,7 +420,7 @@
 
           
           <div class="method-source-code" id="push-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 49</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">push</span> (<span class="ruby-identifier">newP</span>)
         <span class="ruby-identifier">tmp</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">newP</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-ivar">@tail</span>)
         <span class="ruby-ivar">@tail</span>.<span class="ruby-identifier">sig</span> = <span class="ruby-identifier">tmp</span>
@@ -455,7 +455,7 @@
 
           
           <div class="method-source-code" id="push_batch-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 55</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 55</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">push_batch</span> (<span class="ruby-identifier">aryNews</span>)
         <span class="ruby-identifier">aryNews</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">nP</span><span class="ruby-operator">|</span>
                 <span class="ruby-identifier">tmp</span> = <span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">nP</span>,<span class="ruby-keyword">nil</span>,<span class="ruby-ivar">@tail</span>)
@@ -492,7 +492,7 @@
 
           
           <div class="method-source-code" id="reverse_each-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 71</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 71</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse_each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
         <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@tail</span>
         <span class="ruby-keyword">while</span> <span class="ruby-identifier">tmp</span> <span class="ruby-keyword">do</span>
@@ -529,7 +529,7 @@
 
           
           <div class="method-source-code" id="tail-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 37</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">tail</span> <span class="ruby-comment">#devuelve el VALOR del ultimo nodo</span>
         <span class="ruby-ivar">@tail</span>.<span class="ruby-identifier">valor</span>
 <span class="ruby-keyword">end</span></pre>
@@ -562,7 +562,7 @@
 
           
           <div class="method-source-code" id="top-source">
-            <pre><span class="ruby-comment"># File ListaEnlazada.rb, line 41</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/ListaEnlazada.rb, line 41</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">top</span> <span class="ruby-comment">#devuelve el primer NODO</span>
         <span class="ruby-ivar">@head</span>
 <span class="ruby-keyword">end</span></pre>

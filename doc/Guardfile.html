@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Guardfile - RDoc Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./Guardfile.html">Guardfile</a>
+  
+    <li><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./Test_LPP_gemspec.html">Test_LPP.gemspec</a>
+  
+    <li><a href="./doc/Exam_html.html">Exam.html</a>
+  
+    <li><a href="./doc/Lista_html.html">Lista.html</a>
+  
+    <li><a href="./doc/Object_html.html">Object.html</a>
+  
+    <li><a href="./doc/Pregunta_html.html">Pregunta.html</a>
+  
+    <li><a href="./doc/TestLPP_html.html">TestLPP.html</a>
+  
+    <li><a href="./doc/TrueFalse_html.html">TrueFalse.html</a>
+  
+    <li><a href="./doc/fonts_css.html">fonts.css</a>
+  
+    <li><a href="./doc/index_html.html">index.html</a>
+  
+    <li><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="./doc/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page Guardfile">
+
+<p># A sample <a href="Guardfile.html">Guardfile</a> # More info at <a
+href="https://github.com/guard/guard#readme">github.com/guard/guard#readme</a></p>
+
+<p>guard :bundler do</p>
+
+<pre>watch(&#39;Gemfile&#39;)
+# Uncomment next line if your Gemfile contains the `gemspec&#39; command.
+# watch(/^.+\.gemspec/)</pre>
+
+<p>end</p>
+
+<p># Note: The cmd option is now required due to the increasing number of ways
+#       rspec may be run, below are examples of the most common uses. #  *
+bundler: &#39;bundle exec rspec&#39; #  * bundler binstubs:
+&#39;bin/rspec&#39; #  * spring: &#39;bin/rsspec&#39; (This will use spring
+if running and you have #                          installed the spring
+binstubs per the docs) #  * zeus: &#39;zeus rspec&#39; (requires the server
+to be started separetly) #  * &#39;just&#39; rspec: &#39;rspec&#39; guard
+:rspec, cmd: &#39;bundle exec rspec&#39; do</p>
+
+<pre class="ruby"><span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^spec/.+_spec\.rb$}</span>)
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^lib/(.+)\.rb$}</span>)     { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;spec/lib/#{m[1]}_spec.rb&quot;</span> }
+<span class="ruby-identifier">watch</span>(<span class="ruby-string">&#39;spec/spec_helper.rb&#39;</span>)  { <span class="ruby-string">&quot;spec&quot;</span> }
+
+<span class="ruby-comment"># Rails example</span>
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^app/(.+)\.rb$}</span>)                           { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;spec/#{m[1]}_spec.rb&quot;</span> }
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^app/(.*)(\.erb|\.haml|\.slim)$}</span>)          { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;spec/#{m[1]}#{m[2]}_spec.rb&quot;</span> }
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^app/controllers/(.+)_(controller)\.rb$}</span>)  { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> [<span class="ruby-node">&quot;spec/routing/#{m[1]}_routing_spec.rb&quot;</span>, <span class="ruby-node">&quot;spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb&quot;</span>, <span class="ruby-node">&quot;spec/acceptance/#{m[1]}_spec.rb&quot;</span>] }
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^spec/support/(.+)\.rb$}</span>)                  { <span class="ruby-string">&quot;spec&quot;</span> }
+<span class="ruby-identifier">watch</span>(<span class="ruby-string">&#39;config/routes.rb&#39;</span>)                           { <span class="ruby-string">&quot;spec/routing&quot;</span> }
+<span class="ruby-identifier">watch</span>(<span class="ruby-string">&#39;app/controllers/application_controller.rb&#39;</span>)  { <span class="ruby-string">&quot;spec/controllers&quot;</span> }
+<span class="ruby-identifier">watch</span>(<span class="ruby-string">&#39;spec/rails_helper.rb&#39;</span>)                       { <span class="ruby-string">&quot;spec&quot;</span> }
+
+<span class="ruby-comment"># Capybara features specs</span>
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^app/views/(.+)/.*\.(erb|haml|slim)$}</span>)     { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;spec/features/#{m[1]}_spec.rb&quot;</span> }
+
+<span class="ruby-comment"># Turnip features and steps</span>
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^spec/acceptance/(.+)\.feature$}</span>)
+<span class="ruby-identifier">watch</span>(<span class="ruby-regexp">%r{^spec/acceptance/steps/(.+)_steps\.rb$}</span>)   { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-constant">Dir</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-node">&quot;**/#{m[1]}.feature&quot;</span>)][<span class="ruby-value">0</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;spec/acceptance&#39;</span> }
+</pre>
+
+<p>end</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

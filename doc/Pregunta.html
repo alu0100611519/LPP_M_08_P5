@@ -157,7 +157,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 5</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> (<span class="ruby-identifier">enunciado</span>,<span class="ruby-identifier">opciones</span>, <span class="ruby-identifier">numero_opciones</span> ,<span class="ruby-identifier">respuesta</span>, <span class="ruby-identifier">dificultad</span>) <span class="ruby-comment">#enunciado de la pregunta, vector de strings c$</span>
         <span class="ruby-ivar">@op</span> = []
         <span class="ruby-ivar">@enun</span> = <span class="ruby-identifier">enunciado</span>
@@ -203,7 +203,7 @@
 
           
           <div class="method-source-code" id="3C-3D-3E-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 42</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
         <span class="ruby-comment">#return nil unless other.instance_of? Pregunta</span>
         <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enunciado</span>().<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">enunciado</span>.<span class="ruby-identifier">length</span>
@@ -237,7 +237,7 @@
 
           
           <div class="method-source-code" id="3D-3D-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 46</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 46</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
 
         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
@@ -279,7 +279,7 @@
 
           
           <div class="method-source-code" id="3E-3D-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 59</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 59</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&gt;=</span>(<span class="ruby-identifier">other</span>)
 
         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
@@ -323,7 +323,7 @@
 
           
           <div class="method-source-code" id="correcta-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 38</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">correcta</span>
         <span class="ruby-ivar">@resp</span>
 <span class="ruby-keyword">end</span></pre>
@@ -356,7 +356,7 @@
 
           
           <div class="method-source-code" id="dif-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 26</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">dif</span>
         <span class="ruby-ivar">@dif</span>
 <span class="ruby-keyword">end</span></pre>
@@ -389,7 +389,7 @@
 
           
           <div class="method-source-code" id="enunciado-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 30</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">enunciado</span>
         <span class="ruby-ivar">@enun</span>
 <span class="ruby-keyword">end</span></pre>
@@ -422,7 +422,7 @@
 
           
           <div class="method-source-code" id="opciones-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 34</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">opciones</span>
         <span class="ruby-ivar">@op</span>
 <span class="ruby-keyword">end</span></pre>
@@ -455,7 +455,7 @@
 
           
           <div class="method-source-code" id="responder-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 74</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 74</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">responder</span> (<span class="ruby-identifier">eleccion</span>)
         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">eleccion</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@resp</span>)
                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
@@ -492,7 +492,7 @@
 
           
           <div class="method-source-code" id="to_s-source">
-            <pre><span class="ruby-comment"># File Preguntas.rb, line 15</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Preguntas.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
         <span class="ruby-identifier">tmp</span> = <span class="ruby-string">&quot;&quot;</span>
         <span class="ruby-identifier">tmp</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{@enun}\n&quot;</span>

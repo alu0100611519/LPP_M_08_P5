@@ -136,13 +136,14 @@
 
         <div class="method-description">
           
-          
+          <p>constructor interactivo para que el usuario responda las preguntas desde un
+fichero ejecutable</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 8</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">lis</span> )
         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;No es una lista&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lis</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Lista</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Introduzca su nombre:&quot;</span>
@@ -192,7 +193,7 @@
 
           
           <div class="method-source-code" id="apellido-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 34</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">apellido</span>
          <span class="ruby-ivar">@apellido</span>
 <span class="ruby-keyword">end</span></pre>
@@ -225,7 +226,7 @@
 
           
           <div class="method-source-code" id="correcta-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 38</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 40</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">correcta</span>
          <span class="ruby-ivar">@right</span>
 <span class="ruby-keyword">end</span></pre>
@@ -258,7 +259,7 @@
 
           
           <div class="method-source-code" id="incorrecta-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 42</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 44</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">incorrecta</span>
         <span class="ruby-ivar">@wrong</span>
 <span class="ruby-keyword">end</span></pre>
@@ -291,7 +292,7 @@
 
           
           <div class="method-source-code" id="nombre-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 30</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">nombre</span>
          <span class="ruby-ivar">@nombre</span>
 <span class="ruby-keyword">end</span></pre>
@@ -324,7 +325,7 @@
 
           
           <div class="method-source-code" id="reverse-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 60</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 62</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse</span> <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>
         <span class="ruby-ivar">@Lis</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span>
                 <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span> <span class="ruby-identifier">q</span>
@@ -359,7 +360,7 @@
 
           
           <div class="method-source-code" id="run-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 66</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 68</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;/n/nExamen de LPP &quot;</span>
         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Apellidos: #{@apellido}&quot;</span>
@@ -420,7 +421,7 @@
 
           
           <div class="method-source-code" id="testcheck-source">
-            <pre><span class="ruby-comment"># File Examen.rb, line 46</span>
+            <pre><span class="ruby-comment"># File lib/Test_LPP/Examen.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">testcheck</span> (<span class="ruby-identifier">ary</span>)
         <span class="ruby-identifier">tmp</span> = <span class="ruby-ivar">@Lis</span>
         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
