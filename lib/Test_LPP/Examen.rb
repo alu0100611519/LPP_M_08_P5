@@ -5,7 +5,7 @@
 
 class Exam
 	
-      #constructor interactivo para que el usuario responda las preguntas desde un fichero ejecutable
+    #constructor interactivo para que el usuario responda las preguntas desde un fichero ejecutable
 	def initialize( lis )
 		raise ArgumentError, 'No es una lista' unless lis.is_a? Lista
 		puts "Introduzca su nombre:"
