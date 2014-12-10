@@ -41,6 +41,20 @@ class Multirespuesta < Question
 	end
 end
 
+class TrueFalse < Question
+
+	def ask
+		puts ""
+		puts "#{@title} (#{rating})"
+		puts "1- True"
+		puts "2- False"
+		@answer = gets.to_s.strip
+		return true if @answer.casecmp(@options[0].title) == 0
+		return false
+	end
+
+end
+
 class Option
 	attr_reader :title, :correct
 	def initialize(titlew , correctw)
