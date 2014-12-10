@@ -1,7 +1,6 @@
 class Quiz
 
 	def initialize(namew)
-
 		@name = namew
 		@questions = []
 	end
@@ -29,6 +28,6 @@ class Quiz
 		end
 
 		puts ""
-		puts "Tienes #{@count} respuestas correctas de #{@total}."
+		puts "Tienes #{@count} puntos de #{@total} posibles."
 	end
 end

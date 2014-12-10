@@ -7,7 +7,7 @@ class Pregunta
                 @enun = enunciado
                 @resp = respuesta
                 @op = opciones
-                @n_o = numero_opciones #tamaño de las opciones, numero que necesittaremos para usar el bucle
+                @n_o = numero_opciones #tamaño de las opciones, numero que necesitaremos para usar el bucle
                 @dif = dificultad
         end
         
@@ -37,6 +37,30 @@ class Pregunta
 	
 	def correcta
 		@resp
+	end
+	
+	def set_Op (nOp)
+		@op=nOp
+	end
+	
+	def set_enun (nEnun)
+		@enun = nEnun
+	end
+	
+	def set_resp (nResp)
+		@resp = nResp
+	end
+	
+	def set_nOpt (nNOp) 
+		@n_o = nNOp
+	end
+	
+	def set_dif (nDif)
+		@dif = nDif
+	end
+	
+	def add_option (nOption)
+		@op << nOption
 	end
 
 	def <=>(other)
@@ -78,6 +102,9 @@ class Pregunta
                         return false
                 end
         end
+        
+        #alias method_missing tag
+        
 end
 
 class TrueFalse < Pregunta

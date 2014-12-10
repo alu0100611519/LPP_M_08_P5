@@ -5,6 +5,6 @@ multichoice('Cuantos argumentos de tipo bloque puede recibir un metodo?', 5)
 	option('los que defina el usuario',false)
 
 
-TrueFalse('En Ruby los bloques son objetos que contienen codigo', 5)
+truefalse('En Ruby los bloques son objetos que contienen codigo', 5)
 	option('False')
 

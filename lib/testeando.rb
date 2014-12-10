@@ -1,6 +1,6 @@
-require './lib/Test_LPP/ListaEnlazada.rb'
-require './lib/Test_LPP/Preguntas.rb'
-require './lib/Test_LPP/version.rb'
+require './Test_LPP/ListaEnlazada.rb'
+require './Test_LPP/Preguntas.rb'
+require './Test_LPP/version.rb'
 
 #require './lib/Test_LPP.rb'
 

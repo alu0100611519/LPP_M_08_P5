@@ -26,7 +26,7 @@ class Text < Question
 end
 
 
-class Multirespuesta < Question
+class MultiRespuesta < Question
 
 	def ask
 		puts ""

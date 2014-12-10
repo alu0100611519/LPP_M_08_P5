@@ -4,6 +4,7 @@ require './lib/Test_LPP/version.rb'
 require './lib/Test_LPP/Examen.rb'
 require 'spec_helper'
 
+
 describe Pregunta do
     before do
         @p1 = Pregunta.new("1.-) Cual es la salida del siguiente codigo Ruby?\n\tclass Xyx\n\t  def pots\n\t    @nice\n\t  end\n\tend\n\nxyz = Xyz.new\np xyz.pots",["#<Xyz:0xa00208>","nil","0","Ninguna de las anteriores"],4,'2',2)
@@ -13,7 +14,7 @@ describe Pregunta do
     it "Comprobar a que clase pertenece" do
 	expect(@p2.class).to eq TrueFalse
 	expect(@p1.class).not_to eq TrueFalse
-        expect(@p1.class).to eq Pregunta
+    expect(@p1.class).to eq Pregunta
 	expect(@p2.class.superclass).to eq Pregunta
     end
     it "Debe existir una pregunta" do
